@@ -81,13 +81,7 @@ export const Chessboard = ()=>{
 
     return(
     <>
-            <div>
-                <input type="number"
-                value={grid}
-                onChange={(e)=>onChangeHandler(e)}
-                min= '1'
-                 />
-              </div>
+           
 
               <div>
                   <QueenBoard n = {4}></QueenBoard>
