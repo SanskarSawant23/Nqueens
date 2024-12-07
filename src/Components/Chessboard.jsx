@@ -84,7 +84,12 @@ export const Chessboard = ()=>{
            
 
               <div>
-                  <QueenBoard n = {4}></QueenBoard>
+                <div className="flex justify-center mt-4 mb-4 "><input type="number" 
+                onChange={onChangeHandler} 
+                placeholder="Enter the Grid Number"
+                className="border border-black p-3"/>
+                </div>
+                  <QueenBoard n = {grid}></QueenBoard>
                  
               </div>
                  

@@ -10,13 +10,16 @@ export const QueenBoard = ({n})=>{ //size of the gird
             if(queen.row == row || queen.col == col){
                 return false;
             }
+            else if(Math.abs(row- queen.row) === Math.abs(col-queen.col)){
+                return false;
+            }
         }
         return true;
     }
 
 
     const handlePlaceQeen = (row, col)=>{
-        const isQueenHere = queens.some((q)=>q.row === row && q.col==col);
+        const isQueenHere = queens.some((q)=>q.row === row && q.col===col); //checks if there is a queen already placed here!
 
         if(isQueenHere){
             setQueen(queens.filter((q)=> !(q.row === row && q.col === col))); //
